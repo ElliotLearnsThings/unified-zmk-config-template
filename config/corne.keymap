@@ -80,7 +80,7 @@
         combo_num_lparen {
             timeout-ms = <COMBO_TERM>;
             key-positions = <13 14>;
-            layers = <VIM>;
+						layers = <VIM>;
             bindings = <&kp LPAR>;
         };
         combo_num_rparen {
@@ -149,7 +149,7 @@
             bindings = <
 &kp TAB    &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y      &kp F     &kp G         &kp C         &kp R        &kp L        &kp RET
 &kp ESC    &hml LGUI A  &hml LALT O  &hml LSHIFT E &hml LCTRL U  &kp I      &kp D     &hmr RCTRL H  &hmr RSHIFT T &hmr RALT N  &hmr RGUI S  &kp SEMI
-&caps_word &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B     &kp M         &kp W         &kp V        &kp Z        &trans
+&kp LSHIFT &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B     &kp M         &kp W         &kp V        &kp Z        &kp RSHIFT
                                      &mo SYM_R     &mo VIM       &kp SPACE  &kp BSPC  &mo NUMP      &mo SYM_L
             >;
         };
