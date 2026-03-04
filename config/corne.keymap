@@ -149,7 +149,7 @@
             bindings = <
 &kp TAB    &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y      &kp F     &kp G         &kp C         &kp R        &kp L        &kp RET
 &kp ESC    &hml LGUI A  &hml LALT O  &hml LSHIFT E &hml LCTRL U  &kp I      &kp D     &hmr RCTRL H  &hmr RSHIFT T &hmr RALT N  &hmr RGUI S  &kp SEMI
-&kp LSHIFT &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B     &kp M         &kp W         &kp V        &kp Z        &kp RSHIFT
+&caps_word &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B     &kp M         &kp W         &kp V        &kp Z        &trans
                                      &mo SYM_R     &mo VIM       &kp SPACE  &kp BSPC  &mo NUMP      &mo SYM_L
             >;
         };
@@ -181,7 +181,7 @@
             bindings = <
 &trans  &kp N7  &kp N8  &kp N9  &trans   &trans     &kp PG_UP  &trans     &trans    &trans     &trans  &trans
 &trans  &kp N4  &kp N5  &kp N6  &kp N0   &trans     &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &trans   &trans     &kp B      &kp LC(D)  &kp LC(U) &kp W      &kp E   &trans
+&trans  &kp N1  &kp N2  &kp N3  &trans   &trans     &kp B      &kp LC(J)  &kp LC(D) &kp W      &kp E   &trans
                         &trans  &trans   &trans     &trans     &trans     &trans
             >;
         };
@@ -199,17 +199,18 @@
             >;
         };
 
-        /* 4: NUMP - Numpad
-         * Right: (  )  [  ]  DEL / 7  8  9  +  BSP / 4  5  6  -  RET
-         * Thumb: 1 / 0 / .
-         * Left:  transparent
+				/* 4: NUMP - Numpad
+         * Activated by right middle thumb - so LEFT hand types numbers
+         * Left:  DEL  7  8  9  +  /  4  5  6  -  /  BSP  1  2  3  *
+         * Right: (  )  [  ]  /  /  .  0  =  RET  (symbols + confirm)
+         * Thumb: trans / trans / .      0 / [held] / RET
          */
         numpad_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT   &kp DEL   &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &kp N7    &kp N8    &kp N9    &kp PLUS   &kp BSPC  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &kp N4    &kp N5    &kp N6    &kp MINUS  &kp RET   &trans
-                        &trans  &trans  &kp N1     &kp N0    &trans    &kp DOT
+&trans  &kp DEL   &kp N7  &kp N8  &kp N9  &kp PLUS     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &trans     &trans
+&trans  &kp BSPC  &kp N4  &kp N5  &kp N6  &kp MINUS    &kp SLASH &kp ASTRK &kp DOT   &kp EQUAL &kp RET    &trans
+&trans  &trans    &kp N1  &kp N2  &kp N3  &kp N0       &trans    &trans    &trans    &trans    &trans     &trans
+                           &trans  &trans  &kp SPACE    &kp N0    &trans    &kp RET
             >;
         };
 
