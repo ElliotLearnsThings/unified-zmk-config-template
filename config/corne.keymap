@@ -38,7 +38,7 @@
 #define SYS   6
 #define SWAY  7
 
-#define HRM_TAPPING_TERM  200
+#define HRM_TAPPING_TERM  175
 #define HRM_IDLE          150
 #define COMBO_TERM         40
 
@@ -150,7 +150,7 @@
 &kp TAB    &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y      &kp F     &kp G         &kp C         &kp R        &kp L        &kp RET
 &kp ESC    &hml LGUI A  &hml LALT O  &hml LSHIFT E &hml LCTRL U  &kp I      &kp D     &hmr RCTRL H  &hmr RSHIFT T &hmr RALT N  &hmr RGUI S  &kp SEMI
 &caps_word &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B     &kp M         &kp W         &kp V        &kp Z        &trans
-                                     &mo SYM_R     &mo VIM       &kp SPACE  &kp BSPC  &mo NUMP      &mo SYM_L
+&mo SYM_R     &mo VIM       &kp SPACE  &kp BSPC  &mo NUMP      &mo SYM_L
             >;
         };
 
@@ -177,14 +177,14 @@
          *   Home: LEFT DOWN UP RIGHT -
          *   Bot:  B  C+D  C+U  W  E
          */
-        vim_layer {
-            bindings = <
-&trans  &kp N7  &kp N8  &kp N9  &trans   &trans     &kp PG_UP  &trans     &trans    &trans     &trans  &trans
-&trans  &kp N4  &kp N5  &kp N6  &kp N0   &trans     &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
-&trans  &kp N1  &kp N2  &kp N3  &trans   &trans     &kp B      &kp LC(J)  &kp LC(D) &kp W      &kp E   &trans
-                        &trans  &trans   &trans     &trans     &trans     &trans
-            >;
-        };
+				 vim_layer {
+					 bindings = <
+					 &trans  &kp DEL   &kp N7  &kp N8  &kp N9  &trans     &kp PG_UP  &trans     &trans    &trans     &trans  &trans
+					 &trans  &kp BSPC  &kp N4  &kp N5  &kp N6  &kp N0     &kp LEFT   &kp DOWN   &kp UP    &kp RIGHT  &trans  &trans
+					 &trans  &trans    &kp N1  &kp N2  &kp N3  &trans     &kp B      &kp LC(J)  &kp LC(K) &kp W      &kp E   &trans
+					 &kp N0  &trans  &trans     &trans     &trans     &trans
+					 >;
+				 };
 
         /* 3: SYM_L - Symbols left hand
          * Left:  ^  &  *  ~  `  /  ;  [  ]  '  "  :  <  >  ?
@@ -208,8 +208,8 @@
         numpad_layer {
             bindings = <
 &trans  &kp DEL   &kp N7  &kp N8  &kp N9  &kp PLUS     &kp LPAR  &kp RPAR  &kp LBKT  &kp RBKT  &trans     &trans
-&trans  &kp BSPC  &kp N4  &kp N5  &kp N6  &kp MINUS    &kp SLASH &kp ASTRK &kp DOT   &kp EQUAL &kp RET    &trans
-&trans  &trans    &kp N1  &kp N2  &kp N3  &kp N0       &trans    &trans    &trans    &trans    &trans     &trans
+&trans  &kp BSPC  &kp N4  &kp N5  &kp N6  &kp N0    &kp SLASH &kp ASTRK &kp DOT   &kp EQUAL &kp RET    &trans
+&trans  &trans    &kp N1  &kp N2  &kp N3  &kp MINUS       &trans    &trans    &trans    &trans    &trans     &trans
                            &trans  &trans  &kp SPACE    &kp N0    &trans    &kp RET
             >;
         };
