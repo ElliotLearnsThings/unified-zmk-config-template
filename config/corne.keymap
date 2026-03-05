@@ -38,7 +38,7 @@
 #define SYS   6
 #define SWAY  7
 
-#define HRM_TAPPING_TERM  175
+#define HRM_TAPPING_TERM  200
 #define HRM_IDLE          150
 #define COMBO_TERM         40
 
