@@ -133,6 +133,7 @@
     };
 
     keymap {
+        compatible = "zmk,keymap";
 				/* 0: BASE - QWERTY + HRM
 				* HRM: A=GUI  S=ALT  D=SFT  F=CTL  |  J=CTL  K=SFT  L=ALT  ;=GUI
          * Left outer bottom:  CAPS_WORD
