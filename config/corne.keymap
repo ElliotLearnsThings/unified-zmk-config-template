@@ -247,8 +247,8 @@
          */
         sway_layer {
             bindings = <
-&trans  &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans      &trans      &trans      &trans
-&trans  &kp LG(N1)  &kp LG(N2)  &kp LG(N3)  &kp LG(N4)  &kp LG(N5)     &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)  &trans
+&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)      &kp LG(N5)         &kp LG(N6)      &kp LG(N7)      &kp LG(N8)      &kp LG(N9)      &kp LG(N0)      &trans
+&trans  &kp LA(N1)  &kp LA(N2)  &kp LA(N3)  &kp LA(N4)  &kp LA(N5)     &kp LA(N6)  &kp LA(N7)  &kp LA(N8)  &kp LA(N9)  &kp LA(N0)  &trans
 &trans  &trans      &trans      &trans      &trans      &trans         &trans      &trans      &trans      &trans      &trans      &trans
                                 &trans      &trans      &trans         &trans      &trans      &trans
             >;
