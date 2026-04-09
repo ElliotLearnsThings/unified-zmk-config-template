@@ -134,24 +134,26 @@
 
     keymap {
         compatible = "zmk,keymap";
-				/* 0: BASE - QWERTY + HRM
-				* HRM: A=GUI  S=ALT  D=SFT  F=CTL  |  J=CTL  K=SFT  L=ALT  ;=GUI
+
+        /* 0: BASE - Dvorak + HRM
+         * HRM: A=GUI  O=ALT  E=SFT  U=CTL  |  H=CTL  T=SFT  N=ALT  S=GUI
          * Left outer bottom:  CAPS_WORD
          * Right outer bottom: trans (reserved)
          *
-         * TAB  Q    W    E    R    T       Y    U    I    O    P    ENT
-         * ESC  GUI/A ALT/S SFT/D CTL/F G   H   CTL/J SFT/K ALT/L GUI/;  '
-         * CAPS Z    X    C    V    B       N    M    ,    .    /    ---
+         * TAB  '    ,    .    P    Y       F    G    C    R    L    ENT
+         * ESC  GUI/A ALT/O SFT/E CTL/U I   D   CTL/H SFT/T ALT/N GUI/S ;
+         * CAPS /    Q    J    K    X       B    M    W    V    Z    ---
          *           [SYM_R] [VIM] [SPC]  [BSP] [NUMP] [SYM_L]
          */
-        default_layer {
-            bindings = 
-&kp TAB    &kp Q        &kp W        &kp E         &kp R         &kp T      &kp Y     &kp U         &kp I         &kp O        &kp P          &kp RET
-&kp ESC    &hml LGUI A  &hml LALT S  &hml LSHIFT D &hml LCTRL F  &kp G      &kp H     &hmr RCTRL J  &hmr RSHIFT K &hmr RALT L  &hmr RGUI SEMI &kp SQT
-&caps_word &kp Z        &kp X        &kp C         &kp V         &kp B      &kp N     &kp M         &kp COMMA     &kp DOT      &kp SLASH      &trans
-                                     &mo SYM_R     &mo VIM       &kp SPACE  &kp BSPC  &mo NUMP      &mo SYM_L
-            >;
-        };
+				 default_layer {
+					 bindings = <
+						 &kp TAB    &kp SQT      &kp COMMA    &kp DOT       &kp P         &kp Y      &kp F      &kp G         &kp C         &kp R        &kp L        &kp RET
+						 &kp ESC    &hml LGUI A  &hml LALT O  &hml LSHIFT E &hml LCTRL U  &kp I      &kp D      &hmr RCTRL H  &hmr RSHIFT T &hmr RALT N  &hmr RGUI S  &kp SEMI
+						 &caps_word &kp SLASH    &kp Q        &kp J         &kp K         &kp X      &kp B      &kp M         &kp W         &kp V        &kp Z        &trans
+						 &mo SYM_R    &mo VIM       &kp SPACE     &kp BSPC   &mo NUMP   &mo SYM_L
+					 >;
+				 };
+
         /* 1: SYM_R - Symbols right hand / Swedish left hand
          * Left:  trans  trans  RA(W)=A  RA(P)=O  RA(Q)=U  trans
          * Right: !  @  #  $  %  /  -  (  )  =  \  /  _  {  }  +  |
